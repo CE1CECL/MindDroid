@@ -1,0 +1,259 @@
+patching file arch/arm/boot/compressed/decompress.c
+patching file arch/arm/boot/compressed/head.S
+Hunk #2 succeeded at 629 (offset 1 line).
+Hunk #3 succeeded at 639 (offset 1 line).
+patching file arch/arm/boot/compressed/Makefile
+patching file arch/arm/boot/compressed/misc.c
+Hunk #3 succeeded at 106 (offset -11 lines).
+Hunk #4 succeeded at 143 (offset -11 lines).
+Hunk #5 succeeded at 172 (offset -11 lines).
+Hunk #6 succeeded at 194 (offset -11 lines).
+patching file arch/arm/boot/compressed/vmlinux.lds.in
+patching file arch/arm/configs/msm_defconfig
+patching file arch/arm/kernel/debug.S
+patching file arch/arm/kernel/entry-armv.S
+patching file arch/arm/kernel/process.c
+patching file arch/arm/kernel/signal.c
+patching file arch/arm/kernel/traps.c
+patching file arch/arm/mm/cache-v6.S
+patching file arch/arm/mm/flush.c
+patching file block/blk-core.c
+patching file block/genhd.c
+patching file Documentation/android.txt
+patching file drivers/base/power/main.c
+patching file drivers/char/dcc_tty.c
+patching file drivers/char/Kconfig
+patching file drivers/char/Makefile
+patching file drivers/char/mem.c
+Hunk #5 succeeded at 693 (offset -8 lines).
+Hunk #6 succeeded at 726 (offset -8 lines).
+Hunk #7 succeeded at 743 (offset -8 lines).
+Hunk #8 succeeded at 752 (offset -8 lines).
+Hunk #9 succeeded at 841 (offset -8 lines).
+patching file drivers/cpufreq/cpufreq_ondemand.c
+Hunk #1 succeeded at 576 (offset -3 lines).
+patching file drivers/i2c/chips/Kconfig
+patching file drivers/i2c/chips/Makefile
+patching file drivers/i2c/chips/pca963x.c
+patching file drivers/input/evdev.c
+Hunk #4 succeeded at 75 (offset -1 lines).
+Hunk #5 succeeded at 240 (offset -1 lines).
+Hunk #6 succeeded at 277 (offset -1 lines).
+Hunk #7 succeeded at 343 (offset -1 lines).
+patching file drivers/input/Kconfig
+patching file drivers/input/keyreset.c
+patching file drivers/input/Makefile
+patching file drivers/input/misc/gpio_axis.c
+patching file drivers/input/misc/gpio_event.c
+patching file drivers/input/misc/gpio_input.c
+patching file drivers/input/misc/gpio_matrix.c
+patching file drivers/input/misc/gpio_output.c
+patching file drivers/input/misc/Kconfig
+patching file drivers/input/misc/keychord.c
+patching file drivers/input/misc/Makefile
+Hunk #1 succeeded at 13 with fuzz 3 (offset 1 line).
+patching file drivers/input/touchscreen/Kconfig
+patching file drivers/input/touchscreen/Makefile
+patching file drivers/input/touchscreen/synaptics_i2c_rmi.c
+patching file drivers/Kconfig
+patching file drivers/leds/Kconfig
+patching file drivers/leds/ledtrig-sleep.c
+patching file drivers/leds/Makefile
+patching file drivers/Makefile
+patching file drivers/misc/apanic.c
+patching file drivers/misc/Kconfig
+patching file drivers/misc/kernel_debugger.c
+patching file drivers/misc/Makefile
+patching file drivers/misc/pmem.c
+patching file drivers/misc/uid_stat.c
+patching file drivers/misc/wl127x-rfkill.c
+patching file drivers/mmc/card/block.c
+patching file drivers/mmc/card/Kconfig
+patching file drivers/mmc/core/core.c
+patching file drivers/mmc/core/Kconfig
+patching file drivers/mmc/core/sd.c
+patching file drivers/mmc/core/sdio_bus.c
+patching file drivers/mmc/core/sdio.c
+patching file drivers/mmc/core/sdio_io.c
+patching file drivers/mtd/nand/Kconfig
+patching file drivers/mtd/nand/nand_base.c
+patching file drivers/net/Kconfig
+patching file drivers/net/Makefile
+patching file drivers/net/pppolac.c
+patching file drivers/net/pppopns.c
+patching file drivers/power/power_supply_core.c
+patching file drivers/rtc/alarm.c
+patching file drivers/rtc/alarm-dev.c
+patching file drivers/rtc/class.c
+patching file drivers/rtc/Kconfig
+patching file drivers/rtc/Makefile
+patching file drivers/serial/serial_core.c
+patching file drivers/staging/android/binder.c
+patching file drivers/staging/android/binder.h
+patching file drivers/staging/android/Kconfig
+patching file drivers/staging/android/logger.c
+patching file drivers/staging/android/logger.h
+patching file drivers/staging/android/lowmemorykiller.c
+patching file drivers/staging/android/Makefile
+patching file drivers/staging/android/ram_console.c
+patching file drivers/staging/android/timed_gpio.c
+patching file drivers/staging/android/timed_gpio.h
+patching file drivers/staging/android/timed_output.c
+patching file drivers/staging/android/timed_output.h
+patching file drivers/staging/android/TODO
+patching file drivers/staging/Kconfig
+patching file drivers/staging/Makefile
+patching file drivers/switch/Kconfig
+patching file drivers/switch/Makefile
+patching file drivers/switch/switch_class.c
+patching file drivers/switch/switch_gpio.c
+patching file drivers/usb/gadget/android.c
+patching file drivers/usb/gadget/composite.c
+patching file drivers/usb/gadget/f_acm.c
+patching file drivers/usb/gadget/f_adb.c
+patching file drivers/usb/gadget/f_mass_storage_tmp.c
+patching file drivers/usb/gadget/f_rndis.c
+Hunk #5 succeeded at 857 (offset -3 lines).
+Hunk #6 succeeded at 870 (offset -3 lines).
+patching file drivers/usb/gadget/Kconfig
+patching file drivers/usb/gadget/Makefile
+Hunk #1 succeeded at 55 with fuzz 3.
+patching file drivers/usb/gadget/u_ether.c
+patching file drivers/usb/gadget/u_ether.h
+patching file drivers/w1/w1.c
+patching file fs/fat/dir.c
+patching file fs/fat/fat.h
+patching file fs/fat/inode.c
+patching file fs/fs-writeback.c
+patching file fs/Kconfig
+patching file fs/Makefile
+patching file fs/partitions/check.c
+patching file fs/proc/base.c
+Hunk #4 succeeded at 2649 (offset -13 lines).
+patching file fs/yaffs2/devextras.h
+patching file fs/yaffs2/Kconfig
+patching file fs/yaffs2/Makefile
+patching file fs/yaffs2/moduleconfig.h
+patching file fs/yaffs2/yaffs_checkptrw.c
+patching file fs/yaffs2/yaffs_checkptrw.h
+patching file fs/yaffs2/yaffs_ecc.c
+patching file fs/yaffs2/yaffs_ecc.h
+patching file fs/yaffs2/yaffs_fs.c
+patching file fs/yaffs2/yaffs_getblockinfo.h
+patching file fs/yaffs2/yaffs_guts.c
+patching file fs/yaffs2/yaffs_guts.h
+patching file fs/yaffs2/yaffsinterface.h
+patching file fs/yaffs2/yaffs_mtdif1.c
+patching file fs/yaffs2/yaffs_mtdif1.h
+patching file fs/yaffs2/yaffs_mtdif2.c
+patching file fs/yaffs2/yaffs_mtdif2.h
+patching file fs/yaffs2/yaffs_mtdif.c
+patching file fs/yaffs2/yaffs_mtdif.h
+patching file fs/yaffs2/yaffs_nand.c
+patching file fs/yaffs2/yaffs_nandemul2k.h
+patching file fs/yaffs2/yaffs_nand.h
+patching file fs/yaffs2/yaffs_packedtags1.c
+patching file fs/yaffs2/yaffs_packedtags1.h
+patching file fs/yaffs2/yaffs_packedtags2.c
+patching file fs/yaffs2/yaffs_packedtags2.h
+patching file fs/yaffs2/yaffs_qsort.c
+patching file fs/yaffs2/yaffs_qsort.h
+patching file fs/yaffs2/yaffs_tagscompat.c
+patching file fs/yaffs2/yaffs_tagscompat.h
+patching file fs/yaffs2/yaffs_tagsvalidity.c
+patching file fs/yaffs2/yaffs_tagsvalidity.h
+patching file fs/yaffs2/yportenv.h
+patching file include/linux/amba/mmci.h
+patching file include/linux/android_aid.h
+patching file include/linux/android_alarm.h
+patching file include/linux/android_pmem.h
+patching file include/linux/ashmem.h
+patching file include/linux/earlysuspend.h
+patching file include/linux/gpio_event.h
+patching file include/linux/if_pppolac.h
+patching file include/linux/if_pppopns.h
+patching file include/linux/if_pppox.h
+patching file include/linux/kernel_debugger.h
+patching file include/linux/keychord.h
+patching file include/linux/keyreset.h
+patching file include/linux/mmc/host.h
+patching file include/linux/mmc/sdio_func.h
+patching file include/linux/mm.h
+patching file include/linux/msdos_fs.h
+patching file include/linux/power_supply.h
+patching file include/linux/serial_core.h
+Hunk #1 succeeded at 223 (offset 3 lines).
+patching file include/linux/sockios.h
+patching file include/linux/switch.h
+patching file include/linux/synaptics_i2c_rmi.h
+patching file include/linux/uid_stat.h
+patching file include/linux/usb/android_composite.h
+patching file include/linux/usb/composite.h
+patching file include/linux/wakelock.h
+patching file include/linux/wifi_tiwlan.h
+patching file include/linux/wl127x-rfkill.h
+patching file include/net/bluetooth/hci_core.h
+patching file include/net/bluetooth/hci.h
+patching file include/net/bluetooth/l2cap.h
+patching file include/net/bluetooth/rfcomm.h
+patching file include/net/bluetooth/sco.h
+patching file include/net/tcp.h
+patching file init/Kconfig
+patching file kernel/cgroup.c
+patching file kernel/cgroup_freezer.c
+patching file kernel/cpuset.c
+patching file kernel/futex.c
+Hunk #1 succeeded at 222 (offset 2 lines).
+Hunk #2 succeeded at 245 (offset 2 lines).
+patching file kernel/panic.c
+patching file kernel/power/consoleearlysuspend.c
+patching file kernel/power/earlysuspend.c
+patching file kernel/power/fbearlysuspend.c
+patching file kernel/power/Kconfig
+patching file kernel/power/main.c
+patching file kernel/power/Makefile
+patching file kernel/power/power.h
+patching file kernel/power/process.c
+patching file kernel/power/suspend.c
+patching file kernel/power/userwakelock.c
+patching file kernel/power/wakelock.c
+patching file kernel/printk.c
+patching file kernel/sched.c
+Hunk #1 succeeded at 6937 (offset -14 lines).
+Hunk #2 succeeded at 9694 (offset -18 lines).
+Hunk #3 succeeded at 10535 (offset -18 lines).
+patching file kernel/sysctl.c
+patching file mm/ashmem.c
+patching file mm/Makefile
+patching file mm/page_alloc.c
+Hunk #2 succeeded at 1377 (offset -1 lines).
+Hunk #3 succeeded at 2869 (offset -1 lines).
+Hunk #4 succeeded at 2921 (offset -1 lines).
+patching file mm/shmem.c
+patching file net/bluetooth/af_bluetooth.c
+patching file net/bluetooth/hci_conn.c
+Hunk #6 succeeded at 508 (offset -3 lines).
+Hunk #7 succeeded at 647 (offset -3 lines).
+Hunk #8 succeeded at 692 (offset -3 lines).
+patching file net/bluetooth/hci_core.c
+patching file net/bluetooth/hci_event.c
+Hunk #3 succeeded at 1700 with fuzz 2.
+patching file net/bluetooth/l2cap.c
+Hunk #6 succeeded at 1760 (offset -1 lines).
+Hunk #7 succeeded at 1888 (offset -1 lines).
+Hunk #8 succeeded at 3872 (offset 2 lines).
+patching file net/bluetooth/rfcomm/core.c
+Reversed (or previously applied) patch detected!  Skipping patch.
+12 out of 12 hunks ignored -- saving rejects to file net/bluetooth/rfcomm/core.c.rej
+patching file net/bluetooth/sco.c
+patching file net/ipv4/af_inet.c
+patching file net/ipv4/devinet.c
+patching file net/ipv4/Makefile
+patching file net/ipv4/sysfs_net_ipv4.c
+patching file net/ipv4/tcp_ipv4.c
+patching file net/ipv6/af_inet6.c
+patching file net/Kconfig
+patching file net/rfkill/core.c
+patching file net/rfkill/Kconfig
+patching file net/socket.c
+patching file security/commoncap.c
