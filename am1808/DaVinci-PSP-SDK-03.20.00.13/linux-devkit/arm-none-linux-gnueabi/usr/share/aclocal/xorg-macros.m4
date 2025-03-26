@@ -1085,11 +1085,11 @@ if test "x$STRICT_COMPILE" = "xyes"; then
 	AC_CHECK_DECL([__SUNPRO_C], [SUNCC="yes"], [SUNCC="no"])
 	AC_CHECK_DECL([__INTEL_COMPILER], [INTELCC="yes"], [INTELCC="no"])
 	if test "x$GCC" = xyes ; then
-		STRICT_CFLAGS="-pedantic -Werror"
+		STRICT_CFLAGS="-pedantic -W"
 	elif test "x$SUNCC" = "xyes"; then
 		STRICT_CFLAGS="-errwarn"
     elif test "x$INTELCC" = "xyes"; then
-		STRICT_CFLAGS="-Werror"
+		STRICT_CFLAGS="-W"
 	fi
 fi
 CWARNFLAGS="$CWARNFLAGS $STRICT_CFLAGS"

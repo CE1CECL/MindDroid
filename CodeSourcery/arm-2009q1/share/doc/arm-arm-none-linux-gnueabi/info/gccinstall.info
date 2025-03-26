@@ -1055,11 +1055,11 @@ option.
 `--enable-werror=yes'
 `--enable-werror=no'
      When you specify this option, it controls whether certain files in
-     the compiler are built with `-Werror' in bootstrap stage2 and
-     later.  If you don't specify it, `-Werror' is turned on for the
+     the compiler are built with `-W' in bootstrap stage2 and
+     later.  If you don't specify it, `-W' is turned on for the
      main development trunk.  However it defaults to off for release
      branches and final releases.  The specific files which get
-     `-Werror' are controlled by the Makefiles.
+     `-W' are controlled by the Makefiles.
 
 `--enable-checking'
 `--enable-checking=LIST'

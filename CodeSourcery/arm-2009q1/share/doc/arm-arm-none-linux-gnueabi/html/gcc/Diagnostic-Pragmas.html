@@ -60,7 +60,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Pragmas.html#Pragmas">Pragmas</a>
 <p>GCC allows the user to selectively enable or disable certain types of
 diagnostics, and change the kind of the diagnostic.  For example, a
 project's policy might require that all sources compile with
-<samp><span class="option">-Werror</span></samp> but certain files might have exceptions allowing
+<samp><span class="option">-W</span></samp> but certain files might have exceptions allowing
 specific types of warnings.  Or, a project might selectively enable
 diagnostics and treat them as errors depending on which preprocessor
 macros are defined.
@@ -74,7 +74,7 @@ Use <samp><span class="option">-fdiagnostics-show-option</span></samp> to determ
 are controllable and which option controls them.
 
      <p><var>kind</var> is &lsquo;<samp><span class="samp">error</span></samp>&rsquo; to treat this diagnostic as an error,
-&lsquo;<samp><span class="samp">warning</span></samp>&rsquo; to treat it like a warning (even if <samp><span class="option">-Werror</span></samp> is
+&lsquo;<samp><span class="samp">warning</span></samp>&rsquo; to treat it like a warning (even if <samp><span class="option">-W</span></samp> is
 in effect), or &lsquo;<samp><span class="samp">ignored</span></samp>&rsquo; if the diagnostic is to be ignored. 
 <var>option</var> is a double quoted string which matches the command line
 option.

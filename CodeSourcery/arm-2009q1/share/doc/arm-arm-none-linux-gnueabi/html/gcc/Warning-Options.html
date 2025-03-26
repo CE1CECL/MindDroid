@@ -71,19 +71,19 @@ warnings but control the kinds of diagnostics produced by GCC.
 
      <br><dt><code>-w</code><dd><a name="index-w-225"></a>Inhibit all warning messages.
 
-     <br><dt><code>-Werror</code><dd><a name="index-Werror-226"></a><a name="index-Wno_002derror-227"></a>Make all warnings into errors.
+     <br><dt><code>-W</code><dd><a name="index-W226"></a><a name="index-Wno_002derror-227"></a>Make all warnings into errors.
 
-     <br><dt><code>-Werror=</code><dd><a name="index-Werror_003d-228"></a><a name="index-Wno_002derror_003d-229"></a>Make the specified warning into an error.  The specifier for a warning
-is appended, for example <samp><span class="option">-Werror=switch</span></samp> turns the warnings
+     <br><dt><code>-W</code><dd><a name="index-W_003d-228"></a><a name="index-Wno_002derror_003d-229"></a>Make the specified warning into an error.  The specifier for a warning
+is appended, for example <samp><span class="option">-Wswitch</span></samp> turns the warnings
 controlled by <samp><span class="option">-Wswitch</span></samp> into errors.  This switch takes a
-negative form, to be used to negate <samp><span class="option">-Werror</span></samp> for specific
+negative form, to be used to negate <samp><span class="option">-W</span></samp> for specific
 warnings, for example <samp><span class="option">-Wno-error=switch</span></samp> makes
-<samp><span class="option">-Wswitch</span></samp> warnings not be errors, even when <samp><span class="option">-Werror</span></samp>
+<samp><span class="option">-Wswitch</span></samp> warnings not be errors, even when <samp><span class="option">-W</span></samp>
 is in effect.  You can use the <samp><span class="option">-fdiagnostics-show-option</span></samp>
 option to have each controllable warning amended with the option which
 controls it, to determine what to use with this option.
 
-     <p>Note that specifying <samp><span class="option">-Werror=</span></samp><var>foo</var> automatically implies
+     <p>Note that specifying <samp><span class="option">-W</span></samp><var>foo</var> automatically implies
 <samp><span class="option">-W</span></samp><var>foo</var>.  However, <samp><span class="option">-Wno-error=</span></samp><var>foo</var> does not
 imply anything.
 

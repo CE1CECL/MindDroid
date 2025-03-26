@@ -252,7 +252,7 @@ in the following sections.
 \&\-Wconversion  \-Wcoverage\-mismatch  \-Wno\-deprecated\-declarations 
 \&\-Wdisabled\-optimization  \-Wno\-div\-by\-zero  
 \&\-Wempty\-body  \-Wno\-endif\-labels 
-\&\-Werror  \-Werror=* 
+\&\-W  \-W* 
 \&\-Wfatal\-errors  \-Wfloat\-equal  \-Wformat  \-Wformat=2 
 \&\-Wno\-format\-extra\-args \-Wformat\-nonliteral 
 \&\-Wformat\-security  \-Wformat\-y2k \-Wignored\-qualifiers 
@@ -2390,22 +2390,22 @@ Check the code for syntax errors, but don't do anything beyond that.
 .IP "\fB\-w\fR" 4
 .IX Item "-w"
 Inhibit all warning messages.
-.IP "\fB\-Werror\fR" 4
-.IX Item "-Werror"
+.IP "\fB\-W\fR" 4
+.IX Item "-W"
 Make all warnings into errors.
-.IP "\fB\-Werror=\fR" 4
-.IX Item "-Werror="
+.IP "\fB\-W\fR" 4
+.IX Item "-W"
 Make the specified warning into an error.  The specifier for a warning
-is appended, for example \fB\-Werror=switch\fR turns the warnings
+is appended, for example \fB\-Wswitch\fR turns the warnings
 controlled by \fB\-Wswitch\fR into errors.  This switch takes a
-negative form, to be used to negate \fB\-Werror\fR for specific
+negative form, to be used to negate \fB\-W\fR for specific
 warnings, for example \fB\-Wno\-error=switch\fR makes
-\&\fB\-Wswitch\fR warnings not be errors, even when \fB\-Werror\fR
+\&\fB\-Wswitch\fR warnings not be errors, even when \fB\-W\fR
 is in effect.  You can use the \fB\-fdiagnostics\-show\-option\fR
 option to have each controllable warning amended with the option which
 controls it, to determine what to use with this option.
 .Sp
-Note that specifying \fB\-Werror=\fR\fIfoo\fR automatically implies
+Note that specifying \fB\-W\fR\fIfoo\fR automatically implies
 \&\fB\-W\fR\fIfoo\fR.  However, \fB\-Wno\-error=\fR\fIfoo\fR does not
 imply anything.
 .IP "\fB\-Wfatal\-errors\fR" 4
@@ -6915,8 +6915,8 @@ This usually happens in code of the form
 .Sp
 The second and third \f(CW\*(C`FOO\*(C'\fR should be in comments, but often are not
 in older programs.  This warning is on by default.
-.IP "\fB\-Werror\fR" 4
-.IX Item "-Werror"
+.IP "\fB\-W\fR" 4
+.IX Item "-W"
 Make all warnings into hard errors.  Source code which triggers warnings
 will be rejected.
 .IP "\fB\-Wsystem\-headers\fR" 4

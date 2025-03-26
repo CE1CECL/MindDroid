@@ -26,7 +26,7 @@
 @ kernel/bounds.c -mlittle-endian -marm -mapcs -mno-sched-prolog
 @ -mabi=aapcs-linux -mno-thumb-interwork -march=armv5te -mtune=arm9tdmi
 @ -msoft-float -auxbase-strip kernel/bounds.s -Os -Wall -Wundef
-@ -Wstrict-prototypes -Wno-trigraphs -Werror-implicit-function-declaration
+@ -Wstrict-prototypes -Wno-trigraphs -Wimplicit-function-declaration
 @ -Wno-format-security -Wdeclaration-after-statement -Wno-pointer-sign
 @ -fno-strict-aliasing -fno-common -fno-delete-null-pointer-checks
 @ -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls

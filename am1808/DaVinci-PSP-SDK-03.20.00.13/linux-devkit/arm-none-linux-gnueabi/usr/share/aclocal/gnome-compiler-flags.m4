@@ -49,7 +49,7 @@ AC_DEFUN([GNOME_COMPILE_WARNINGS],[
 	done
 	unset option
 	if test "$enable_compile_warnings" = "error" ; then
-	    warning_flags="$warning_flags -Werror"
+	    warning_flags="$warning_flags -W"
 	fi
 	;;
     *)

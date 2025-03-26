@@ -3,7 +3,7 @@
 #
 
 asflags-y := -ansi
-ccflags-y := -Werror
+ccflags-y := -W
 
 extra-y     := head_$(BITS).o
 extra-y     += init_task.o

@@ -4020,7 +4020,7 @@ single-letter options may _not_ be grouped: `-dM' is very different from
      The second and third `FOO' should be in comments, but often are not
      in older programs.  This warning is on by default.
 
-`-Werror'
+`-W'
      Make all warnings into hard errors.  Source code which triggers
      warnings will be rejected.
 
