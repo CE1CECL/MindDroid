@@ -1,6 +1,6 @@
 EXTRA_CFLAGS += -Ipru-firmware-05-31-2011-1423-v3.0/pru/hal/uart/include -Ipru-firmware-05-31-2011-1423-v3.0/pru/hal/common/include
 
-$(MOD)-objs :=  d_uart_new.o \
+$(MOD)-objs :=  d_uart.o \
 			    lego_ti_omapl_pru_suart.o \
 					pru-firmware-05-31-2011-1423-v3.0/pru/hal/uart/src/suart_api.o \
 					pru-firmware-05-31-2011-1423-v3.0/pru/hal/uart/src/suart_utils.o \
