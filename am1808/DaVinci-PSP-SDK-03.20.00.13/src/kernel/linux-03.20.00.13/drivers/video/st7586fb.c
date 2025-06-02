@@ -93,7 +93,7 @@ static struct fb_fix_screeninfo st7586fb_fix __devinitdata = {
 	.xpanstep	= 0,
 	.ypanstep	= 0,
 	.ywrapstep	= 0,
-	.line_length	= (WIDTH+2)/3,
+	.line_length	= (WIDTH*2), // .line_length	= (WIDTH+2)/3, /* CECL MindDroid Change */
 	.accel		= FB_ACCEL_NONE,
 };
 
@@ -102,7 +102,7 @@ static struct fb_var_screeninfo st7586fb_var __devinitdata = {
 	.yres		= HEIGHT,
 	.xres_virtual	= WIDTH,
 	.yres_virtual	= HEIGHT,
-	.bits_per_pixel	= 2,
+	.bits_per_pixel	= 16, // .bits_per_pixel	= 2, /* CECL MindDroid Change */
 	.nonstd		= 1,
 };
 
@@ -241,25 +241,55 @@ static void st7586_reset(struct st7586fb_par *par)
 static void st7586fb_update_display(struct st7586fb_par *par)
 {
     int ret = 0, i=0;
-	u8 *vmem = par->info->screen_base;
+	u16 *vmem = (u16 *)par->info->screen_base; // u8 *vmem = par->info->screen_base; /* CECL MindDroid Change */
 
 	// Check if any data has been put into screen buffer. 
 	// In case data written - Select display as inited 
 	if (!driver_inited) {
-	  while ( (!vmem[i]) && (i <(WIDTH+2)/3*HEIGHT)) i++;
-	  if (i != ((WIDTH+2)/3*HEIGHT)) driver_inited = true;
+	  while ( (!vmem[i]) && (i <WIDTH*HEIGHT)) i++; // while ( (!vmem[i]) && (i <(WIDTH+2)/3*HEIGHT)) i++; /* CECL MindDroid Change */
+	  if (i != (WIDTH*HEIGHT)) driver_inited = true; // if (i != ((WIDTH+2)/3*HEIGHT)) driver_inited = true; /* CECL MindDroid Change */
 	}
 
 	if (driver_inited) {
+		/* Begin CECL MindDroid Changes */
+	  u8 *txbuf;
+	  int c = 0;
+	  int j = 0;
+	  int k = 0;
+	  int r = 0;
+	  u8 st7586_lookup[] = { 0x7, 0x4, 0x2, 0x0 };
+	  txbuf = kmalloc((WIDTH+2)/3*HEIGHT, GFP_KERNEL);
+	  if (!txbuf) {
+	    return;
+	  }
+	  for (r = 0; r < HEIGHT; r++) {
+	    for (c = 0; c < WIDTH; c += 3) {
+		   u8 px[3] = {0};
+		   for (k = 0; k < 3 && (c + k) < WIDTH; k++) {
+		     u16 pixel = vmem[r * WIDTH + c + k];
+		     u8 r5 = (pixel >> 11) & 0x1F;
+		     u8 g6 = (pixel >> 5) & 0x3F;
+		     u8 b5 = pixel & 0x1F;
+		     u8 r8 = (r5 * 255) / 31;
+		     u8 g8 = (g6 * 255) / 63;
+		     u8 b8 = (b5 * 255) / 31;
+		     u8 gray = (r8 * 299 + g8 * 587 + b8 * 114) / 1000;
+		     px[k] = st7586_lookup[gray >> 6];
+		   }
+		   txbuf[j++] = (px[0] << 5) | (px[1] << 2) | (px[2] >> 1);
+	    }
+	  }
+		/* CECL MindDroid Changes End */
 	  st7586_set_addr_win(par, 0, 0, WIDTH, HEIGHT);
 	  st7586_write_cmd(par, ST7586_RAMWR);
 
 	  /* Blast framebuffer to ST7586 internal display RAM */
-	  ret = st7586_write_data_buf(par, vmem, (WIDTH+2)/3*HEIGHT);
+	  ret = st7586_write_data_buf(par, txbuf, (WIDTH+2)/3*HEIGHT); // ret = st7586_write_data_buf(par, vmem, (WIDTH+2)/3*HEIGHT); /* CECL MindDroid Change */
 	  
 	  if (ret < 0)
 	    pr_err("%s: spi_write failed to update display buffer\n",
 		   par->info->fix.id);
+	    kfree(txbuf); /* CECL MindDroid Change */
 	}
 }
 
@@ -411,7 +441,7 @@ static int __devinit st7586fb_probe (struct spi_device *spi)
 {
 	int chip = spi_get_device_id(spi)->driver_data;
 	struct st7586fb_platform_data *pdata = spi->dev.platform_data;
-	int vmem_size = (WIDTH+2)/3*HEIGHT;
+	int vmem_size = (WIDTH*2)*HEIGHT; // int vmem_size = (WIDTH+2)/3*HEIGHT; /* CECL MindDroid Change */
 	u8 *vmem;
 	struct fb_info *info;
 	struct st7586fb_par *par;
