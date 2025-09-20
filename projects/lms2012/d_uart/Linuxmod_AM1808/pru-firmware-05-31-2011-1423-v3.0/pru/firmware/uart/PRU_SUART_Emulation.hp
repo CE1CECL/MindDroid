@@ -426,8 +426,8 @@
 #define SUART_RX_TIMEOUT_BIT        		6
 #define SUART_CH_TXRXCHNSTATUS_BIT  		7
 
-//#define SUART_CH_CTRL_SAMPLING_MASK		0xc00
-//#define SUART_CH_CTRL_SAMPLING_SHIFT	    	0xa
+#define SUART_CH_CTRL_SAMPLING_MASK		0xc00
+#define SUART_CH_CTRL_SAMPLING_SHIFT	    	0xa
 
 
 // All the channel register and global control register ends at 0x083

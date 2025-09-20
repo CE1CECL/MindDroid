@@ -387,16 +387,16 @@ void      SetGpio(int Pin)
 
     if (Pin < NO_OF_GPIOS)
     {
-      //#define DEBUG
-      #undef DEBUG
+      #define DEBUG
+      //#undef DEBUG
       #ifdef DEBUG
         printk("    GP%d_%-2d   0x%08X and 0x%08X or 0x%08X\n",(Pin >> 4),(Pin & 0x0F),(u32)Reg, MuxRegMap[Tmp].Mask, MuxRegMap[Tmp].Mode);
       #endif
     }
     else
     {
-      //#define DEBUG
-      #undef DEBUG
+      #define DEBUG
+      //#undef DEBUG
       #ifdef DEBUG
         printk("    FUNCTION 0x%08X and 0x%08X or 0x%08X\n",(u32)Reg, MuxRegMap[Tmp].Mask, MuxRegMap[Tmp].Mode);
       #endif
@@ -404,8 +404,8 @@ void      SetGpio(int Pin)
   }
   else
   {
-    //#define DEBUG
-    #undef DEBUG
+    #define DEBUG
+    //#undef DEBUG
     #ifdef DEBUG
       printk("*   GP%d_%-2d  ********* ERROR not found *********\n",(Pin >> 4),(Pin & 0x0F));
     #endif
@@ -421,8 +421,8 @@ void      InitGpio(void)
   // unlock
   REGUnlock;
 
-  //#define DEBUG
-  #undef DEBUG
+  #define DEBUG
+  //#undef DEBUG
   #ifdef DEBUG
     printk("  Sound\n");
   #endif
@@ -461,16 +461,16 @@ void    GetPeriphealBasePtr(ULONG Address, ULONG Size, ULONG **Ptr)
 
     if (*Ptr != NULL)
     {
-      //#define DEBUG
-      #undef DEBUG
+      #define DEBUG
+      //#undef DEBUG
       #ifdef DEBUG
         printk("%s memory Remapped from 0x%08lX\n",DEVICE1_NAME,(unsigned long)*Ptr);
       #endif
     }
     else
     {
-      //#define DEBUG
-      #undef DEBUG
+      #define DEBUG
+      //#undef DEBUG
       #ifdef DEBUG
         printk("Memory remap ERROR");
       #endif
@@ -478,8 +478,8 @@ void    GetPeriphealBasePtr(ULONG Address, ULONG Size, ULONG **Ptr)
   }
   else
   {
-    //#define DEBUG
-    #undef DEBUG
+    #define DEBUG
+    //#undef DEBUG
     #ifdef DEBUG
       printk("Region request error");
     #endif
@@ -764,8 +764,8 @@ static int Device1Init(void)
   Result  =  misc_register(&Device1);
   if (Result)
   {
-    //#define DEBUG
-    #undef DEBUG
+    #define DEBUG
+    //#undef DEBUG
     #ifdef DEBUG
       printk("  %s device register failed\n",DEVICE1_NAME);
     #endif
@@ -800,8 +800,8 @@ static int Device1Init(void)
 
           SOUNDDisable; // Disable the Sound Power Amp
 
-          //#define DEBUG
-          #undef DEBUG
+          #define DEBUG
+          //#undef DEBUG
 		      #ifdef DEBUG
         	  printk("  %s device register succes\n",DEVICE1_NAME);
 		      #endif
@@ -822,7 +822,7 @@ static void Device1Exit(void)
   misc_deregister(&Device1);
 
   #define DEBUG
-  #undef DEBUG
+  //#undef DEBUG
   #ifdef DEBUG
     printk("%s exit started\n",MODULE_NAME);
   #endif
@@ -840,7 +840,7 @@ static void Device1Exit(void)
     ClearPageReserved(virt_to_page(((unsigned long)pTmp) + i));
 
     #define DEBUG
-    #undef DEBUG
+    //#undef DEBUG
     #ifdef DEBUG
       printk("  %s memory page %d unmapped\n",DEVICE1_NAME,i);
     #endif
@@ -861,14 +861,14 @@ module_param (HwId, charp, 0);
 
 static int ModuleInit(void)
 {
-  //#define DEBUG
-  #undef DEBUG
+  #define DEBUG
+  //#undef DEBUG
   #ifdef DEBUG
     printk("HwId = %d\n",HWID);
   #endif
 
-  //#define DEBUG
-  #undef DEBUG
+  #define DEBUG
+  //#undef DEBUG
   #ifdef DEBUG
     printk("%s init started\n",MODULE_NAME);
   #endif
@@ -878,8 +878,8 @@ static int ModuleInit(void)
     GpioBase  =  (void*)ioremap(DA8XX_GPIO_BASE,0xD8);
     if (GpioBase != NULL)
     {
-      //#define DEBUG
-      #undef DEBUG
+      #define DEBUG
+      //#undef DEBUG
       #ifdef DEBUG
         printk("%s gpio address mapped\n",MODULE_NAME);
       #endif
@@ -896,8 +896,8 @@ static int ModuleInit(void)
 
 static void ModuleExit(void)
 {
-  //#define DEBUG
-  #undef DEBUG
+  #define DEBUG
+  //#undef DEBUG
   #ifdef DEBUG
     printk("%s exit started\n",MODULE_NAME);
   #endif

@@ -384,8 +384,8 @@ static int config_desc(struct usb_composite_dev *cdev, unsigned w_value)
     {
       hs = 1;
       UsbSpeed.Speed = HIGH_SPEED;
-      //#define DEBUG
-      #undef DEBUG
+      #define DEBUG
+      //#undef DEBUG
       #ifdef DEBUG
         printk("Speed = HIGH\n\r");
       #endif
@@ -394,8 +394,8 @@ static int config_desc(struct usb_composite_dev *cdev, unsigned w_value)
     {
       hs = 0;
       UsbSpeed.Speed = FULL_SPEED;
-      #undef DEBUG
-      //#define DEBUG
+      //#undef DEBUG
+      #define DEBUG
       #ifdef DEBUG
         printk("Speed = LOW\n\r");
       #endif
@@ -914,8 +914,8 @@ switch (ctrl->bRequest) {
 
     case 34:
 
-        //#define DEBUG
-        #undef DEBUG
+        #define DEBUG
+        //#undef DEBUG
         #ifdef DEBUG
           printk("\nWE are in GET_REPORT_DESC !! SETUP in COMPUTIL.C - case 34");
         #endif

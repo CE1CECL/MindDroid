@@ -50,8 +50,8 @@ int       HwInvBits  =  0;
 #define   RAMP_FACTOR                   (1000)
 #define   MAX_SYNC_MOTORS               (2)
 
-//#define   COUNTS_PER_PULSE_LM           25600L
-//#define   COUNTS_PER_PULSE_MM           16200L
+#define   COUNTS_PER_PULSE_LM           25600L
+#define   COUNTS_PER_PULSE_MM           16200L
 
 #define   COUNTS_PER_PULSE_LM           12800L
 #define   COUNTS_PER_PULSE_MM           8100L

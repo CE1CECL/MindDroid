@@ -50,14 +50,14 @@
 #define SUART_FIFO_TIMEOUT_MIN 4
 #define SUART_FIFO_TIMEOUT_MAX 500
 
-//#define __SUART_DEBUG 1
+#define __SUART_DEBUG 1
 #ifdef __SUART_DEBUG
 #define __suart_debug(fmt, args...) printk(KERN_ERR "suart_debug: " fmt, ## args)
 #else
 #define __suart_debug(fmt, args...)
 #endif
 
-//#define __SSC_DEBUG 1
+#define __SSC_DEBUG 1
 #ifdef __SSC_DEBUG
 #define __ssc_debug(fmt, args...) printk(fmt, ## args)
 #else
@@ -1191,7 +1191,7 @@ int lego_pru_uart_activate(int port)
 
   if (!soft_uart->port_activated[port])
   {
-    __ssc_debug("\n\n%i A: ", times++);
+    //__ssc_debug("\n\n%i A: ", times++);
     retval =  pru_suart_startup(&soft_uart->port[port],0);
     soft_uart->port_activated[port] = 1;
     soft_uart->search_for_first_byte[port] = 1;
