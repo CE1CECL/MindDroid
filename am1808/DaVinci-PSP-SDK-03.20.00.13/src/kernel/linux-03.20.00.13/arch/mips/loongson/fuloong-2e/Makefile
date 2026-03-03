@@ -4,4 +4,4 @@
 
 obj-y += irq.o reset.o
 
-EXTRA_CFLAGS += -W
+EXTRA_CFLAGS += -Werror

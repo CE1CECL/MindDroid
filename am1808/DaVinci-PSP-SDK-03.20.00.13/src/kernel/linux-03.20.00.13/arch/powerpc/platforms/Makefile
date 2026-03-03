@@ -1,5 +1,5 @@
 
-subdir-ccflags-$(CONFIG_PPC_WERROR) := -W
+subdir-ccflags-$(CONFIG_PPC_WERROR) := -Werror
 
 obj-$(CONFIG_FSL_ULI1575)	+= fsl_uli1575.o
 

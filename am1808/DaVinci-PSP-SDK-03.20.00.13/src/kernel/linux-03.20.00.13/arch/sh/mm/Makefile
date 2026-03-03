@@ -61,4 +61,4 @@ CFLAGS_fault_64.o += -ffixed-r7 \
 	-ffixed-r60 -ffixed-r61 -ffixed-r62 \
 	-fomit-frame-pointer
 
-EXTRA_CFLAGS += -W
+EXTRA_CFLAGS += -Werror

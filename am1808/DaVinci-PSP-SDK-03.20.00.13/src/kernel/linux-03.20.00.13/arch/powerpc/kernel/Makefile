@@ -4,7 +4,7 @@
 
 CFLAGS_ptrace.o		+= -DUTS_MACHINE='"$(UTS_MACHINE)"'
 
-subdir-ccflags-$(CONFIG_PPC_WERROR) := -W
+subdir-ccflags-$(CONFIG_PPC_WERROR) := -Werror
 
 ifeq ($(CONFIG_PPC64),y)
 CFLAGS_prom_init.o	+= -mno-minimal-toc

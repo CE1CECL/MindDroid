@@ -1,3 +1,3 @@
 lib-y := board.o
 
-EXTRA_CFLAGS += -W
+EXTRA_CFLAGS += -Werror

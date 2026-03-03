@@ -18,4 +18,4 @@ endif
 
 obj-$(CONFIG_PCI)		+= pci.o
 
-EXTRA_CFLAGS += -W
+EXTRA_CFLAGS += -Werror
